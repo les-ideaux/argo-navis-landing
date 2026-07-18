@@ -282,10 +282,11 @@
       <a href="#features">Fonctionnalités</a>
       <a href="#how">Comment ça marche</a>
       <a href="#compare">Comparatif</a>
+      <a href="#roadmap">Roadmap</a>
       <a href="#pricing">Tarifs</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a href="#" class="btn btn-ghost">GitHub</a>
       <a href="#" data-link="dashboard" class="btn btn-ghost">Dashboard</a>
       <a href="#download" class="btn btn-primary">Télécharger</a>
     </div>
@@ -296,14 +297,14 @@
 <section class="hero" id="top">
   <div class="glow"></div>
   <div class="wrap">
-    <span class="pill"><span class="dot"></span> Multi-jeux · Zero-config networking · Communautaire</span>
+    <span class="pill"><span class="dot"></span> Zero-config networking · Monitoring · Communautaire</span>
     <h1>Hébergez vos serveurs de jeux.<br /><span class="accent">Sans aucune configuration.</span></h1>
-    <p class="sub">Argo Navis déploie vos serveurs Minecraft, Valheim ou Terraria en moins de 2 minutes — accessibles partout, sans toucher à votre routeur, votre pare-feu ou Docker.</p>
+    <p class="sub">Argo Navis déploie vos serveurs Minecraft (Java, Bedrock, CurseForge, Modrinth) et Valheim en moins de 2 minutes — accessibles partout, sans toucher à votre routeur, votre pare-feu ou Docker.</p>
     <div class="hero-cta">
       <a href="#download" class="btn btn-primary btn-lg">Télécharger gratuitement</a>
       <a href="#how" class="btn btn-ghost btn-lg">Voir comment ça marche</a>
     </div>
-    <p class="hero-note">Gratuit · Windows &amp; Linux · Aucune compétence technique requise</p>
+    <p class="hero-note">Gratuit · Windows · Linux en bêta · Aucune compétence technique requise</p>
 
     <!-- App mockup -->
     <div class="mockup reveal">
@@ -346,10 +347,10 @@
             </div>
             <div class="srv">
               <div class="srv-top">
-                <div class="srv-ico">🌳</div>
+                <div class="srv-ico">🧱</div>
                 <div>
-                  <div class="srv-name">Terra Test</div>
-                  <div class="srv-meta">Terraria · démarrage…</div>
+                  <div class="srv-name">Modded Bedrock</div>
+                  <div class="srv-meta">Minecraft Bedrock · démarrage…</div>
                 </div>
               </div>
               <span class="status st-start"><span class="sd"></span> Démarrage</span>
@@ -378,10 +379,8 @@
   <div class="wrap">
     <p>Des serveurs prêts à jouer, dès l'installation</p>
     <div class="games-row">
-      <span class="game-chip"><span class="e">⛏️</span> Minecraft</span>
+      <span class="game-chip"><span class="e">⛏️</span> Minecraft (Java, Bedrock, CurseForge, Modrinth)</span>
       <span class="game-chip"><span class="e">🪓</span> Valheim</span>
-      <span class="game-chip"><span class="e">🌳</span> Terraria</span>
-      <span class="game-chip"><span class="e">➕</span> Descriptors communautaires</span>
     </div>
   </div>
 </section>
@@ -430,7 +429,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2L19 19M19 5l-2.8 2.8M7.8 16.2L5 19" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" stroke="#3B82F6" stroke-width="1.6"/></svg>
         </div>
         <h3>Zero-config networking</h3>
-        <p>Vos amis se connectent depuis internet sans que vous touchiez à votre box. Un tunnel sécurisé démarre automatiquement avec votre serveur — même derrière un CGNAT ou un double NAT. TCP et UDP natifs pour tous les jeux.</p>
+        <p>Vos amis se connectent depuis internet sans que vous touchiez à votre box. Un tunnel sécurisé démarre automatiquement avec votre serveur — même derrière un CGNAT ou un double NAT. Un port relayé par serveur, TCP et UDP selon le jeu.</p>
         <div class="mini-addr">
           <span class="lab">Adresse publique générée</span>
           <span class="val mono">play.argo.gg:25565</span>
@@ -449,13 +448,26 @@
           <span class="val mono">● running · 4/10 joueurs</span>
         </div>
       </div>
+      <!-- Monitoring — promoted, most mature module -->
+      <div class="card span-3 reveal">
+        <span class="feat-badge">Module le plus abouti</span>
+        <div class="fi">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-6 4 4 5-8 5 7" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Monitoring temps réel</h3>
+        <p>Logs en direct filtrables, alertes CPU/RAM configurables, historique d'uptime avec graphes et nombre de joueurs connectés (Minecraft). C'est aujourd'hui la fonctionnalité la plus complète de l'application.</p>
+        <div class="mini-addr">
+          <span class="lab">Historique d'uptime</span>
+          <span class="val mono">99.2% · 30 derniers jours</span>
+        </div>
+      </div>
       <!-- Game descriptors -->
-      <div class="card span-2 reveal">
+      <div class="card span-3 reveal">
         <div class="fi">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h16M4 19h10" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
         <h3>Game Descriptors</h3>
-        <p>Un format déclaratif portable décrit chaque jeu. Extensible par la communauté, versionné, mis à jour automatiquement.</p>
+        <p>Un format YAML déclaratif décrit chaque jeu du catalogue : image Docker, ports, ressources, variables. La base d'un catalogue qui s'étend au fil des mises à jour de l'app.</p>
       </div>
       <!-- Community -->
       <div class="card span-2 reveal">
@@ -463,23 +475,15 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#3B82F6" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round"/><path d="M16 5.2a3 3 0 010 5.6M18 14c2.3.8 4 3 4 5.5" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
         <h3>Gestion communautaire</h3>
-        <p>Créez des communautés, invitez par lien, attribuez des rôles. Transférez l'hébergement à un membre en un clic.</p>
+        <p>Créez une communauté, invitez des membres par nom d'utilisateur, attribuez des rôles, publiez vos serveurs et pilotez-les à distance depuis le dashboard web.</p>
       </div>
-      <!-- Monitoring -->
+      <!-- File browser -->
       <div class="card span-2 reveal">
         <div class="fi">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-6 4 4 5-8 5 7" stroke="#3B82F6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" stroke="#3B82F6" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Monitoring temps réel</h3>
-        <p>CPU, RAM, réseau, joueurs connectés et logs en direct. Alertes configurables en cas de crash ou de ressources critiques.</p>
-      </div>
-      <!-- Backups -->
-      <div class="card span-2 reveal">
-        <div class="fi">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c5 0 8 1.6 8 3.5S17 10 12 10 4 8.4 4 6.5 7 3 12 3z" stroke="#3B82F6" stroke-width="1.6"/><path d="M4 6.5v11C4 19.4 7 21 12 21s8-1.6 8-3.5v-11M4 12c0 1.9 3 3.5 8 3.5s8-1.6 8-3.5" stroke="#3B82F6" stroke-width="1.6"/></svg>
-        </div>
-        <h3>Sauvegardes &amp; restauration</h3>
-        <p>Backup manuel en un clic, planification automatique et restauration instantanée. Vos mondes sont toujours en sécurité.</p>
+        <h3>Explorateur de fichiers</h3>
+        <p>Parcourez, éditez, renommez et transférez les fichiers de votre serveur directement depuis l'app — sans FTP ni ligne de commande.</p>
       </div>
       <!-- Share -->
       <div class="card span-2 reveal">
@@ -504,7 +508,7 @@
       <div class="step reveal">
         <div class="num">1</div>
         <h4>Choisissez votre jeu</h4>
-        <p>Parcourez le catalogue, sélectionnez Minecraft, Valheim ou Terraria, et donnez un nom à votre serveur.</p>
+        <p>Parcourez le catalogue, sélectionnez Minecraft ou Valheim, et donnez un nom à votre serveur.</p>
       </div>
       <div class="step reveal">
         <div class="num">2</div>
@@ -548,12 +552,12 @@
           <tr>
             <td>NAT traversal intégré</td>
             <td class="no">Non</td><td class="partial">Séparé</td><td class="partial">Minecraft</td>
-            <td class="col-us yes">Oui · multi-jeux</td>
+            <td class="col-us yes">Oui · un port par serveur</td>
           </tr>
           <tr>
             <td>Multi-jeux</td>
             <td class="yes">Oui</td><td class="no">—</td><td class="no">Non</td>
-            <td class="col-us yes">Oui</td>
+            <td class="col-us partial">Catalogue extensible · 2 jeux au lancement</td>
           </tr>
           <tr>
             <td>Format déclaratif portable</td>
@@ -568,7 +572,7 @@
           <tr>
             <td>Transfert de serveur</td>
             <td class="no">Non</td><td class="no">Non</td><td class="no">Non</td>
-            <td class="col-us yes">Oui</td>
+            <td class="col-us partial">Prévu (roadmap)</td>
           </tr>
           <tr>
             <td>Aucune compétence sysadmin</td>
@@ -578,6 +582,48 @@
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<!-- ── Roadmap ────────────────────────────────────────────── -->
+<section class="sec" id="roadmap" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="tag">Ce qui arrive ensuite</div>
+      <h2>On construit en public. Voici ce qui n'est pas encore là.</h2>
+      <p>Argo Navis est un produit jeune : plutôt que de promettre ce qui n'existe pas encore, voici exactement ce qui est en développement.</p>
+    </div>
+    <div class="prob-grid reveal" style="grid-template-columns:repeat(3,1fr);">
+      <div class="prob">
+        <div class="ph" style="color:var(--warning);">◐ En développement</div>
+        <h4>Sauvegardes &amp; restauration</h4>
+        <p>Backup manuel, planification automatique et restauration instantanée de vos mondes.</p>
+      </div>
+      <div class="prob">
+        <div class="ph" style="color:var(--warning);">◐ En développement</div>
+        <h4>Transfert de serveur entre membres</h4>
+        <p>Céder l'hébergement d'un serveur à un autre membre de la communauté.</p>
+      </div>
+      <div class="prob">
+        <div class="ph" style="color:var(--warning);">◐ En développement</div>
+        <h4>Support d'un 3ᵉ jeu</h4>
+        <p>Extension du catalogue au-delà de Minecraft et Valheim.</p>
+      </div>
+      <div class="prob">
+        <div class="ph" style="color:var(--warning);">◐ En développement</div>
+        <h4>Adresse publique persistante</h4>
+        <p>Une adresse stable qui ne change plus d'une session à l'autre.</p>
+      </div>
+      <div class="prob">
+        <div class="ph" style="color:var(--warning);">◐ En développement</div>
+        <h4>Invitations par lien</h4>
+        <p>Rejoindre une communauté via un lien ou un code, sans connaître le nom d'utilisateur.</p>
+      </div>
+    </div>
+    <form class="reveal" id="roadmap-form" style="max-width:480px;margin:44px auto 0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <input type="email" required placeholder="votre@email.com" style="flex:1;min-width:220px;padding:13px 16px;border-radius:var(--radius-md);border:1px solid var(--outline);background:var(--surface-container);color:var(--on-surface);font-size:14.5px;" />
+      <button type="submit" class="btn btn-primary">Être prévenu au lancement</button>
+    </form>
   </div>
 </section>
 
@@ -598,10 +644,9 @@
         <ul>
           <li><span class="ck">✓</span> Application desktop complète</li>
           <li><span class="ck">✓</span> Hébergement local + tunnel intégré</li>
-          <li><span class="ck">✓</span> 3 jeux officiels</li>
+          <li><span class="ck">✓</span> 2 jeux officiels (Minecraft, Valheim)</li>
           <li><span class="ck">✓</span> 1 communauté · jusqu'à 5 membres</li>
           <li><span class="ck">✓</span> Adresse dynamique au démarrage</li>
-          <li><span class="ck">✓</span> Sauvegardes manuelles</li>
           <li><span class="ck">✓</span> <span class="muted">Support communauté (Discord)</span></li>
         </ul>
       </div>
@@ -613,13 +658,47 @@
         <a href="#download" class="btn btn-primary">Passer Premium</a>
         <ul>
           <li><span class="ck">✓</span> Tout le tier gratuit, plus :</li>
-          <li><span class="ck">✓</span> Jeux <strong>illimités</strong> (descriptors communautaires)</li>
-          <li><span class="ck">✓</span> Communautés illimitées · 50 membres</li>
-          <li><span class="ck">✓</span> Adresse persistante / IP dédiée</li>
-          <li><span class="ck">✓</span> Sauvegardes automatiques + cloud</li>
-          <li><span class="ck">✓</span> Transferts de serveur illimités</li>
+          <li><span class="ck">✓</span> Communautés illimitées · jusqu'à 50 membres</li>
+          <li><span class="ck">✓</span> Pilotage à distance depuis le dashboard web</li>
           <li><span class="ck">✓</span> Support prioritaire</li>
+          <li><span class="ck">✓</span> <span class="muted">Accès anticipé aux nouvelles fonctionnalités (roadmap)</span></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────── -->
+<section class="sec" id="faq" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="tag">Questions fréquentes</div>
+      <h2>Ce qu'il faut savoir avant de se lancer</h2>
+    </div>
+    <div class="prob-grid reveal" style="grid-template-columns:1fr 1fr;">
+      <div class="prob">
+        <h4>Mon PC doit-il rester allumé ?</h4>
+        <p>Oui. Argo Navis héberge sur votre propre machine — c'est la contrepartie de ne payer aucun abonnement. Si le PC s'éteint, le serveur s'arrête.</p>
+      </div>
+      <div class="prob">
+        <h4>Ça marche derrière ma box / CGNAT ?</h4>
+        <p>Oui. Le tunnel sortant intégré traverse le NAT et le CGNAT automatiquement, sans configuration de votre routeur.</p>
+      </div>
+      <div class="prob">
+        <h4>Windows uniquement ?</h4>
+        <p>Windows est la plateforme validée aujourd'hui. Linux compile et fonctionne mais est encore en bêta ; macOS n'est pas encore testé.</p>
+      </div>
+      <div class="prob">
+        <h4>Mes sauvegardes sont-elles automatiques ?</h4>
+        <p>Pas encore — c'est en développement, voir la <a href="#roadmap" style="color:var(--primary);">roadmap</a>. Pensez à sauvegarder vos mondes manuellement en attendant.</p>
+      </div>
+      <div class="prob">
+        <h4>Puis-je transférer un serveur à un ami ?</h4>
+        <p>Pas encore. Le transfert de serveur entre membres est prévu, voir la <a href="#roadmap" style="color:var(--primary);">roadmap</a>.</p>
+      </div>
+      <div class="prob">
+        <h4>Mes données et mots de passe sont-ils chiffrés ?</h4>
+        <p>Le tunnel réseau utilise un token d'authentification. Le chiffrement des données stockées localement fait partie de nos prochains chantiers — nous préférons ne rien affirmer de plus tant que ce n'est pas fait.</p>
       </div>
     </div>
   </div>
@@ -633,9 +712,8 @@
     <p>Téléchargez Argo Navis et lancez votre premier serveur en moins de deux minutes. Vos amis vous remercieront.</p>
     <div class="hero-cta">
       <a href="#" data-link="dl-win" class="btn btn-primary btn-lg">⬇ Télécharger pour Windows</a>
-      <a href="#" data-link="dl-linux" class="btn btn-ghost btn-lg">🐧 Télécharger pour Linux</a>
     </div>
-    <p class="hero-note" style="margin-top:18px;">Gratuit · Open-source · Sans carte bancaire</p>
+    <p class="hero-note" style="margin-top:18px;">Gratuit · Sans carte bancaire · Aucun abonnement</p>
   </div>
 </section>
 
@@ -663,16 +741,13 @@
         </div>
         <div class="foot-col">
           <h5>Ressources</h5>
-          <a href="#">Documentation</a>
-          <a href="#">Game Descriptors</a>
-          <a href="#">Discord</a>
-          <a href="#">GitHub</a>
+          <a href="#" data-link="ext-docs">Documentation</a>
+          <a href="#" data-link="ext-discord">Discord</a>
         </div>
         <div class="foot-col">
           <h5>Légal</h5>
-          <a href="#">Confidentialité</a>
-          <a href="#">Conditions</a>
-          <a href="#">Licence</a>
+          <a href="#" data-link="ext-privacy">Confidentialité</a>
+          <a href="#" data-link="ext-terms">Conditions</a>
         </div>
       </div>
     </div>
@@ -685,17 +760,16 @@
 
 <script>
   // ── Liens externes ──────────────────────────────────────
-  // TODO: renseigner l'URL du dashboard web (repo argon-navis-web)
-  const DASHBOARD_URL = '';
-  // TODO: renseigner l'URL de l'installeur Windows (.exe / .msix) — un lien direct vers le fichier déclenche le téléchargement
-  const DOWNLOAD_URL_WINDOWS = '';
-  // TODO: renseigner l'URL du binaire Linux (.AppImage / .deb)
-  const DOWNLOAD_URL_LINUX = '';
+  const DASHBOARD_URL = 'https://les-ideaux.github.io/argo-navis-landing';
+  const DOWNLOAD_URL_WINDOWS = 'argo-navis-1.0.0.zip';
 
   const links = {
-    'dashboard': { url: DASHBOARD_URL, download: false },
-    'dl-win':    { url: DOWNLOAD_URL_WINDOWS, download: true },
-    'dl-linux':  { url: DOWNLOAD_URL_LINUX, download: true },
+    'dashboard':   { url: DASHBOARD_URL, download: false },
+    'dl-win':      { url: DOWNLOAD_URL_WINDOWS, download: true },
+    'ext-docs':    { url: '', download: false },
+    'ext-discord': { url: '', download: false },
+    'ext-privacy': { url: '', download: false },
+    'ext-terms':   { url: '', download: false },
   };
   document.querySelectorAll('[data-link]').forEach(el => {
     const { url, download } = links[el.dataset.link];
@@ -707,6 +781,16 @@
       el.addEventListener('click', e => { e.preventDefault(); alert('Bientôt disponible !'); });
     }
   });
+
+  // ── Roadmap email capture ───────────────────────────────
+  const roadmapForm = document.getElementById('roadmap-form');
+  if (roadmapForm) {
+    roadmapForm.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Merci ! Vous serez prévenu au lancement de ces fonctionnalités.');
+      roadmapForm.reset();
+    });
+  }
 
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
