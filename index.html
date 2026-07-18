@@ -226,22 +226,6 @@
   .no { color: var(--secondary); }
   .partial { color: var(--warning); }
 
-  /* ── Pricing ─────────────────────────────────────────────── */
-  .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 880px; margin: 0 auto; }
-  .plan { background: var(--surface-container); border: 1px solid var(--outline-variant); border-radius: var(--radius-xl); padding: 34px; }
-  .plan.pro { border-color: rgba(59,130,246,.4); background: linear-gradient(180deg, rgba(59,130,246,.06), var(--surface-container) 60%); position: relative; }
-  .plan-badge { position: absolute; top: -12px; left: 34px; background: var(--primary); color: #fff; font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 100px; }
-  .plan h3 { font-size: 20px; margin-bottom: 6px; }
-  .plan .pdesc { font-size: 14px; color: var(--on-surface-variant); margin-bottom: 22px; }
-  .price { display: flex; align-items: baseline; gap: 6px; margin-bottom: 24px; }
-  .price .amt { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; }
-  .price .per { font-size: 15px; color: var(--secondary); }
-  .plan ul { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 13px; }
-  .plan li { display: flex; gap: 11px; align-items: flex-start; font-size: 14.5px; color: var(--on-surface); }
-  .plan li .ck { color: var(--success); flex-shrink: 0; margin-top: 3px; }
-  .plan li .muted { color: var(--on-surface-variant); }
-  .plan .btn { width: 100%; justify-content: center; }
-  @media (max-width: 760px) { .pricing { grid-template-columns: 1fr; } }
 
   /* ── Final CTA ───────────────────────────────────────────── */
   .final { text-align: center; padding: 110px 0; position: relative; }
@@ -283,7 +267,6 @@
       <a href="#how">Comment ça marche</a>
       <a href="#compare">Comparatif</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="#pricing">Tarifs</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
@@ -627,47 +610,6 @@
   </div>
 </section>
 
-<!-- ── Pricing ────────────────────────────────────────────── -->
-<section class="sec" id="pricing" style="padding-top:0;">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">Tarifs</div>
-      <h2>Gratuit pour jouer. Premium pour aller plus loin.</h2>
-      <p>Un tier gratuit généreux pour héberger avec vos amis. Le premium quand vous voulez plus de jeux, de communautés et de tranquillité.</p>
-    </div>
-    <div class="pricing">
-      <div class="plan reveal">
-        <h3>Gratuit</h3>
-        <p class="pdesc">Tout ce qu'il faut pour héberger entre amis.</p>
-        <div class="price"><span class="amt">0€</span><span class="per">pour toujours</span></div>
-        <a href="#download" class="btn btn-ghost">Télécharger</a>
-        <ul>
-          <li><span class="ck">✓</span> Application desktop complète</li>
-          <li><span class="ck">✓</span> Hébergement local + tunnel intégré</li>
-          <li><span class="ck">✓</span> 2 jeux officiels (Minecraft, Valheim)</li>
-          <li><span class="ck">✓</span> 1 communauté · jusqu'à 5 membres</li>
-          <li><span class="ck">✓</span> Adresse dynamique au démarrage</li>
-          <li><span class="ck">✓</span> <span class="muted">Support communauté (Discord)</span></li>
-        </ul>
-      </div>
-      <div class="plan pro reveal">
-        <span class="plan-badge">Le plus populaire</span>
-        <h3>Premium</h3>
-        <p class="pdesc">Pour les communautés actives et exigeantes.</p>
-        <div class="price"><span class="amt">3-5€</span><span class="per">/ mois</span></div>
-        <a href="#download" class="btn btn-primary">Passer Premium</a>
-        <ul>
-          <li><span class="ck">✓</span> Tout le tier gratuit, plus :</li>
-          <li><span class="ck">✓</span> Communautés illimitées · jusqu'à 50 membres</li>
-          <li><span class="ck">✓</span> Pilotage à distance depuis le dashboard web</li>
-          <li><span class="ck">✓</span> Support prioritaire</li>
-          <li><span class="ck">✓</span> <span class="muted">Accès anticipé aux nouvelles fonctionnalités (roadmap)</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── FAQ ────────────────────────────────────────────────── -->
 <section class="sec" id="faq" style="padding-top:0;">
   <div class="wrap">
@@ -735,7 +677,6 @@
           <h5>Produit</h5>
           <a href="#features">Fonctionnalités</a>
           <a href="#how">Comment ça marche</a>
-          <a href="#pricing">Tarifs</a>
           <a href="#download">Télécharger</a>
           <a href="#" data-link="dashboard">Dashboard</a>
         </div>
